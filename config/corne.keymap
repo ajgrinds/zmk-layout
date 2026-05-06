@@ -47,16 +47,65 @@
 
         default_layer {
             bindings = <
-&trans  &kp Q           &kp W           &kp E             &kp R        &kp T          &kp Y        &kp U        &kp I              &kp O            &kp P                    &trans
-&trans  &hm LWIN A      &hm LALT S      &hm LSHFT D       &hm LCTRL F  &kp G          &kp H        &hm RCTRL J  &hm RSHFT K        &hm LALT K       &hm RWIN SEMICOLON       &trans
-&trans  &kp Z           &kp X           &kp C             &kp V        &kp B          &kp N        &kp M        &kp COMMA          &kp DOT          &kp FSLH                 &trans
-                                                          &tog 1       &lt 4 TAB      &lt 3 SPACE  &lt 2 ENTER  &bksp_del          &trans
+&trans  &kp Q       &kp W       &kp E        &kp R       &kp T          &kp Y        &kp U       &kp I         &kp O       &kp P          &trans
+&trans  &hm LWIN A  &hm LALT S  &hm LSHFT D  &hm LCTRL F &kp G          &kp H        &hm RCTRL J &hm RSHFT K   &hm RALT L  &hm RGUI SEMI  &trans
+&trans  &kp Z       &kp X       &kp C        &kp V       &kp B          &kp N        &kp M       &kp COMMA     &kp DOT     &kp FSLH       &trans
+                                             &tog 1      &lt 4 TAB      &lt 3 SPACE  &lt 2 ENTER &bksp_del     &trans
             >;
         };
 
         gallium {
             bindings = <
-&trans  &kp B           &kp L           &kp D             &kp C        &kp V     &kp J   &kp F        &kp O              &kp U            &kp COMMA        &trans
-&trans  &hm LWIN N      &hm LALT R      &hm LSHFT T       &hm LCTRL S  &kp G     &kp Y   &hm RCTRL H  &hm RSHFT A        &hm RALT E       &hm RGUI I       &trans
-&trans  &kp X           &kp Q           &kp M             &kp W        &kp Z     &kp K   &kp P        &kp APOS           &kp SEMI         &kp DOT          &trans
-                                                          &
+&trans  &kp B       &kp L       &kp D        &kp C       &kp V      &kp J   &kp F        &kp O       &kp U       &kp COMMA  &trans
+&trans  &hm LWIN N  &hm LALT R  &hm LSHFT T  &hm LCTRL S &kp G      &kp Y   &hm RCTRL H  &hm RSHFT A &hm RALT E  &hm RGUI I &trans
+&trans  &kp X       &kp Q       &kp M        &kp W       &kp Z      &kp K   &kp P        &kp APOS    &kp SEMI    &kp DOT    &trans
+                                             &trans      &trans     &trans  &trans       &trans      &trans
+            >;
+        };
+
+        numbers_symbols {
+            bindings = <
+&trans  &kp EXCL    &kp LBKT    &kp RBKT     &kp ASTRK   &kp BSLH    &kp N7        &kp N8       &kp N9       &trans  &trans  &trans
+&trans  &kp COMMA   &kp LPAR    &kp RPAR     &kp EQUAL   &kp TILDE   &kp N4        &kp N5       &kp N6       &trans  &trans  &trans
+&trans  &trans      &kp LBRC    &kp RBRC     &kp PLUS    &kp HASH    &kp N1        &kp N2       &kp N3       &trans  &trans  &trans
+                                             &trans      &kp MINUS   &kp UNDER     &trans       &kp N0       &trans
+            >;
+        };
+
+        symbols_2 {
+            bindings = <
+&trans  &trans    &kp GRAVE   &kp PERCENT  &kp CARET   &kp LC(LS(T))    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp AMPS  &kp AT      &kp SQT      &kp DQT     &kp PIPE         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans      &trans       &kp DOLLAR  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans      &trans           &trans  &trans  &trans  &trans
+            >;
+        };
+
+        functions {
+            bindings = <
+&trans  &kp PG_UP   &kp HOME    &kp UP       &kp END     &trans      &kp F7  &kp F8  &kp F9  &kp F12  &to 6       &trans
+&trans  &kp PG_DN   &kp LEFT    &kp DOWN     &kp RIGHT   &kp C_PP    &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT    &trans
+&trans  &trans      &trans      &trans       &kp RGUI    &trans      &kp F1  &kp F2  &kp F3  &kp F10  &sys_reset  &trans
+                                             &trans      &trans      &trans  &trans  &trans  &trans
+            >;
+        };
+
+        empty_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&trans     &kp Q   &kp W   &kp E   &trans     &trans       &trans  &trans  &trans  &trans  &trans  &to 0
+&trans     &kp A   &kp S   &kp D   &kp F      &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
+            >;
+        };
+    };
+};
